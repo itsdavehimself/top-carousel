@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #0f0f0f;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.carousel-main {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.dots {
+  display: grid;
+  width: 100px;
+  grid-template-columns: repeat(5, 1fr);
+  justify-self: center;
+  align-self: start;
+}
+
+.dot {
+  display: grid;
+  background-color: #f7f7f7;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  justify-self: center;
+  transition: transform .4s ease-in-out;
+}
+
+.dot:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  background-color: #d4d4d4;
+}
+
+.dot:active {
+  transform: scale(.8);
+}
+
+.dot.selected {
+  background-color: #797979;
+}
+
+.carousel {
+  height: 500px;
+  width: 500px;
+  background-color: #0f0f0f;
+  overflow-x: hidden;
+  border-radius: 20px;
+}
+
+.image {
+  height: 500px;
+  width: 500px;
+}
+
+.images-strip[pos="1"]{
+  display: grid;
+  grid-template-columns: repeat(5, 500px);
+  transform: translate(0px);
+  transition: transform .8s ease-in-out;
+}
+
+.images-strip[pos="2"] {
+  display: grid;
+  grid-template-columns: repeat(5, 500px);
+  transform: translate(-500px);
+  transition: transform .8s ease-in-out;
+}
+
+.images-strip[pos="3"] {
+  display: grid;
+  grid-template-columns: repeat(5, 500px);
+  transform: translate(-1000px);
+  transition: transform .8s ease-in-out;
+}
+
+.images-strip[pos="4"] {
+  display: grid;
+  grid-template-columns: repeat(5, 500px);
+  transform: translate(-1500px);
+  transition: transform .8s ease-in-out;
+}
+
+.images-strip[pos="5"] {
+  display: grid;
+  grid-template-columns: repeat(5, 500px);
+  transform: translate(-2000px);
+  transition: transform .8s ease-in-out;
+}
+
+.button-div {
+  display: grid;
+  align-items: center;
+}
+
+#previous-div {
+  display: grid;
+  justify-content: end;
+  padding-right: 44px;
+}
+
+#next-div {
+  display: grid;
+  justify-content: start;
+  padding-left: 44px;
+}
+
+.button {
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 50%;
+  transition: .3s;
+  box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.6);
+  background-color: #d4d4d4;
+  font-size: 1.5rem;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #f3f3f3;
+  transform: scale(1.05);
+}
+
+.button:active {
+  transform: scale(.95);
+
+}
