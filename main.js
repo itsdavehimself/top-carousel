@@ -7,24 +7,35 @@ let pos = 1;
 
 nextBtn.addEventListener('click', nextImg);
 previousBtn.addEventListener('click', previousImg);
+imgDot.item(0).classList.toggle('selected');
 
 function nextImg() {
   if (pos > 4) {
     imgStrip.setAttribute('pos', '1');
     pos = 1;
+    imgDot.item(0).classList.toggle('selected');
+    imgDot.item(4).classList.toggle('selected');
   } else {
     pos+=1;
     imgStrip.setAttribute('pos', pos);
+    imgDot.item(pos - 2).classList.toggle('selected');
+    imgDot.item(pos - 1).classList.toggle('selected');
   }
+
 }
 
 function previousImg() {
   if (pos < 2) {
     imgStrip.setAttribute('pos', '5');
     pos = 5;
+    imgDot.item(4).classList.toggle('selected');
+    imgDot.item(0).classList.toggle('selected');
   } else {
     pos-=1;
     imgStrip.setAttribute('pos', pos);
+    imgDot.item(pos).classList.toggle('selected');
+    imgDot.item(pos - 1).classList.toggle('selected');
+
   }
 }
 
