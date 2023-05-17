@@ -40,6 +40,7 @@ function previousImg() {
 
 function selectImg(i) {
   const imgNum = i + 1;
+  pos = i + 1;
   imgStrip.setAttribute('pos', imgNum);
   for (let i = 0; i < imgDot.length; i+=1) {
     const dot = imgDot[i]
