@@ -33,7 +33,7 @@ body {
   width: 10px;
   border-radius: 50%;
   justify-self: center;
-  transition: transform .4s ease-in-out;
+  transition: transform .2s ease-in-out, background-color .2s ease-in-out;
 }
 
 .dot:hover {
@@ -48,6 +48,7 @@ body {
 
 .dot.selected {
   background-color: #797979;
+  transform: scale(1.35);
 }
 
 .carousel {
